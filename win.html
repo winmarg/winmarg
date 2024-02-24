@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV dan Biodata</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 20px;
+      color: #333; /* Tetapkan warna teks */
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      border: 5px solid #333; /* Ubah lebar border dan warna */
+      position: relative; /* Tambahkan posisi relatif */
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+    }
+
+    .btn-toggle-mode {
+      margin-bottom: 10px;
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background-image: none;
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    .dark-mode .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 5px solid #666; /* Ubah lebar border dan warna */
+    }
+
+    .dark-mode .btn-toggle-mode {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Menambahkan kelas text-justify */
+    .text-justify {
+      text-align: justify;
+    }
+
+    /* Mengatur agar posisi data dan elemen tepat seimbang kanan dan kiri */
+    .data-section {
+      margin-top: 20px;
+      border-bottom: 1px solid #ccc; /* Menambahkan garis bawah */
+      padding-bottom: 20px; /* Menambahkan padding bawah */
+    }
+
+    .data-section:last-child {
+      border-bottom: none; /* Hapus garis bawah di elemen terakhir */
+      padding-bottom: 0; /* Hapus padding bawah di elemen terakhir */
+    }
+
+    .data-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .data-section p {
+      margin-bottom: 5px;
+    }
+
+    /* Tambahkan dekorasi border */
+    .decoration-border {
+      border-image-source: url('border.png'); /* Gambar yang digunakan sebagai dekorasi border */
+      border-image-slice: 30 fill; /* Potong border menjadi 30 bagian, dan isi dengan gambar */
+      border-image-width: 20px; /* Lebar border */
+      border-image-repeat: round; /* Ulang gambar border */
+    }
+
+    /* Gaya tambahan untuk judul */
+    h1, h2 {
+      color: #191970; /* Warna biru dongker */
+      font-family: Garamond, serif; /* Font Garamond */
+    }
+
+    /* Gaya tambahan untuk isi kalimat */
+    p {
+      color: #8B4513; /* Warna coklat emas */
+      font-family: Garamond, serif; /* Font Garamond */
+    }
+
+    /* Bingkai untuk foto-foto */
+    .photo-frame {
+      border: 5px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container decoration-border"> <!-- Tambahkan kelas decoration-border -->
+  <!-- Button untuk toggle mode -->
+  <button id="toggleMode" class="btn btn-primary btn-toggle-mode">Toggle Mode</button>
+
+  <!-- Button untuk toggle halaman -->
+  <button id="togglePage" class="btn btn-secondary btn-toggle-mode">Toggle Page</button>
+
+  <div id="cv">
+    <h1>CV</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+      </div>
+      <div class="col-md-8 text-justify">
+        <!-- Menambahkan kelas data-section -->
+        <div class="data-section">
+          <h2>Data Diri</h2>
+          <p>Nama: John Doe</p>
+          <p>Umur: 30 tahun</p>
+          <p>Alamat: Jalan Jendral Sudirman No. 123</p>
+          <!-- Link Nomor HP dan Email -->
+          <p>Nomor HP: <a href="tel:+628123456789">08123456789</a></p>
+          <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 text-justify">
+        <!-- Menambahkan kelas data-section -->
+        <div class="data-section">
+          <h2>Pendidikan</h2>
+          <p>S1 Teknik Informatika - Universitas ABC</p>
+          <p>SMA Negeri 1 XYZ</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-justify">
+        <!-- Menambahkan kelas data-section -->
+        <div class="data-section">
+          <h2>Kemampuan</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 text-justify">
+        <!-- Menambahkan kelas data-section -->
+        <div class="data-section">
+          <h2>Hobby</h2>
+          <p>Main Sepak Bola</p>
+          <p>Membaca Buku</p>
+          <p>Bersepeda</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-justify">
+        <!-- Menambahkan kelas data-section -->
+        <div class="data-section">
+          <h2>Pengalaman</h2>
+          <p>Freelance Web Developer - (2018 - Sekarang)</p>
+          <p>Web Developer di ABC Company - (2016 - 2018)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="biodata" class="text-justify" style="display: none;">
+    <h1>Biodata</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+      </div>
+      <div class="col-md-8">
+        <h2>Informasi Pribadi</h2>
+        <p>Nama: John Doe</p>
+        <p>Umur: 30 tahun</p>
+        <p>Alamat: Jalan Jendral Sudirman No. 123</p>
+      </div>
+    </div>
+
+    <h2>Foto-foto</h2>
+    <div class="row">
+      <!-- Bingkai untuk foto-foto biodata -->
+      <div class="col-md-2">
+        <div class="photo-frame">
+          <img src="photo1.jpg" alt="Photo 1">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="photo-frame">
+          <img src="photo2.jpg" alt="Photo 2">
+        </div>
+      </div>
+      <!-- Tambahkan bingkai untuk foto-foto lainnya -->
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Toggle mode
+    $('#toggleMode').click(function(){
+      $('body').toggleClass('dark-mode');
+    });
+
+    // Toggle halaman
+    $('#togglePage').click(function(){
+      $('#cv').toggle();
+      $('#biodata').toggle();
+    });
+  });
+</script>
+
+</body>
+</html>
